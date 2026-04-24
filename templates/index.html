@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <link rel="icon" href="https://zeuss.b-cdn.net/casa-do-ivo/static/img/favicon.ico" />
+  <meta property="og:title" content="Casa Do Ivo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="As Pousadas Casa do Ivo oferecem cinco destinos únicos que combinam conforto, praticidade e charme local. Seja para relaxar à beira da praia, aproveitar momentos em família ou explorar a cultura e beleza amazônica, temos o lugar perfeito para você. Cada unidade foi cuidadosamente planejada para atender às suas necessidades, com todo o cuidado e carinho que você merece." />
+  <meta name="description" content="As Pousadas Casa do Ivo oferecem cinco destinos únicos que combinam conforto, praticidade e charme local. Seja para relaxar à beira da praia, aproveitar momentos em família ou explorar a cultura e beleza amazônica, temos o lugar perfeito para você. Cada unidade foi cuidadosamente planejada para atender às suas necessidades, com todo o cuidado e carinho que você merece." />
+  <meta property="og:image" content="https://zeuss.b-cdn.net/casa-do-ivo/static/img/serv-1.png" />
+  <meta property="og:url" content="https://casadoivo.com.br" />
+  <meta property="og:site_name" content="Casa Do Ivo" />
+  <meta name="author"          content="Ivo Oliveira" />
+  <meta name="keywords" content="Pousadas Casa do Ivo, hospedagem em Alter do Chão, pousadas em Santarém, pousadas em Pajuçara, pousadas com piscina, hospedagem familiar, aluguel de temporada, pousadas perto da praia, pousadas no centro de Santarém, casa da árvore Pajuçara, casa de vidro Pajuçara, pousadas para grupos, pousadas para negócios, pousadas confortáveis, reservas em pousadas, acomodações em Alter do Chão, turismo no Pará, pousadas com café da manhã, Wi-Fi gratuito, pousadas com churrasqueira, férias em Alter do Chão, descanso em Pajuçara, estadia em Santarém" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const deviceWidth = window.innerWidth;
+      const viewport = document.querySelector('meta[name="viewport"]');
+
+      if (deviceWidth < 900) {
+        // Si el ancho del dispositivo es menor a 700px, forzamos un ajuste
+        const scale = deviceWidth / 700; // Escala para ajustar el contenido a 700px
+        viewport.setAttribute("content", `width=700, initial-scale=${scale}, maximum-scale=${scale}, user-scalable=no`);
+      } else {
+        // Para dispositivos más anchos, mantenemos la vista normal
+        viewport.setAttribute("content", "width=device-width, initial-scale=1, user-scalable=no");
+      }
+    });
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Pousadas Casa Do Ivo",
+      "alternateName": ["Casa do Ivo", "Pousadas Casa do Ivo", "Casas Do Ivo", "casadoivo.com.br"],
+      "url" : "https://casadoivo.com.br"
+    }
+  </script>
+  <title>Pousadas Casa Do Ivo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://icons.getbootstrap.com/assets/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+  <meta name="apple-touch-icon" content="https://zeuss.b-cdn.net/casa-do-ivo/static/img/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3/animate.min.css" />
+  <script src="https://kit.fontawesome.com/25f85401a7.js" crossorigin="anonymous"></script>
+  <style>
+    #navbar-link {
+      cursor: pointer;
+    }
+    #button-contact-us {
+      cursor: pointer;
+    }
+
+
+    @media screen and (max-width: 800px) {
+      .minicard p {
+          font-size: 25px !important;
+      }
+    }
+    
+  </style>
+</head>
+  <body>
+  <div class="overlay">
+            <div class="overlay-content">
+              <button class="close-overlay"><i class="fa-solid fa-xmark"></i></button>
+              <img id="overlay-img" src="" alt="Full view">
+            </div>
+          </div>
+    <div class="navbar-sup">
+        <img class="logo-heading" onclick="window.location.href='';" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/logomarca.png" alt="Casa Do Ivo Logo">
+        <div class="navbar-link" onclick="window.location.href='#servicos'">O QUE SOMOS</div>
+        <div class="navbar-link" onclick="window.location.href='#pousadas'">NOSSAS UNIDADES</div>
+        <div class="navbar-link" onclick="window.location.href='#depoimentos'">DEPOIMENTOS</div>
+        <div class="navbar-link" onclick="window.location.href='#o-que-ha-de-bom'">O QUE HÁ DE BOM</div>
+        <div class="btn-header" onclick="window.open('https://wa.me/559384010771', '_blank');">
+          RESERVE AGORA
+        </div>
+        <div class="menu-drawer" onclick="openDrawer()"><i class="fa-solid fa-bars"></i></div>
+    </div>
+
+    <div id="overlay-sidepanel" onclick="closeDrawer()"></div>
+    <div id="side-panel">
+        <img id="logo-heading" onclick="window.location.href='';" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/logomarca.png" alt="Casa do Ivo Logo">
+        <div class="close-btn" onclick="closeDrawer()"><i class="fa-solid fa-xmark"></i></div>
+        <ul class="menu-options">
+            <li><a href="#servicos" onclick="closeDrawer()">O QUE SOMOS</a></li>
+            <li><a href="#pousadas" onclick="closeDrawer()">NOSSAS UNIDADES</a></li>
+            <li><a href="#depoimentos" onclick="closeDrawer()">DEPOIMENTOS</a></li>
+            <li><a href="#o-que-ha-de-bom" onclick="closeDrawer()">O QUE HÁ DE BOM</a></li>
+        </ul>
+        <div class="btn-header" onclick="window.open('https://wa.me/559384010771', '_blank');">
+          RESERVE AGORA
+        </div>
+    </div>
+
+
+    <div class="hero-area">
+      <div class="carousel">
+        <div class="carousel-images">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-header.jpg" alt="Alter do Chão">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-header.jpg" alt="Family">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-header.jpg" alt="Santarém">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-header.jpg" alt="Soft">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-header.jpg" alt="Pajuçara">
+        </div>
+        <button class="carousel-control prev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="carousel-control next"><i class="fa-solid fa-angle-right"></i></button>
+        
+      </div>
+      
+    </div>
+    <img class="illust-abs" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/areia.png">
+    <div style="z-index:5 !important;" class="section">
+      <br><br><br>
+      <h2 class="wo-mb">Seu <b>refúgio</b> em <b>Santarém</b> e <b>Região</b>.</h2>
+      <img class="gallery-aligned-right" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/gallery-initial.png">
+      <p class="w-100">As <b>Pousadas Casa do Ivo</b> estão em <b>cinco unidades,</b> combinando <b>conforto, comodidades</b> e <b>atendimento diferenciado</b>. Seja para <b>relaxar à beira da praia, aproveitar momentos em família</b> ou <b>explorar a cultura e beleza amazônica</b>, temos o lugar <b>ideal</b> para <b>você</b>.
+      <h2 style="width:70%; margin-top:20px">Estamos <b>localizados</b> em</h2>
+      
+      <div class="cards-group">
+        
+        <div class="card">
+          <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-photo.jpg"  alt="Alter do Chão">
+          <h3>Alter do Chão</h3>
+          <p>2 unidades</p>
+          <div class="btn-action" onclick="window.location.href='#alter-do-chao'">Eu vou lá!</div>
+        </div>
+
+        <div class="card">
+          <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-photo.jpg"  alt="Santarém">
+          <h3>Santarém</h3>
+          <p>2 unidades</p>
+          <div class="btn-action" onclick="window.location.href='#santarem'">Eu vou lá!</div>
+        </div>
+
+        <div class="card">
+          <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-photo.jpg" alt="Pajuçara">
+          <h3>Pajuçara</h3>
+          <p>1 unidade</p>
+          <div class="btn-action" onclick="window.location.href='#pajucara'">Eu vou lá!</div>
+        </div>
+        <div class="rectangle-bg"></div>
+      </div>
+      <div class="big-badge">
+        <h2 id="servicos" style="margin-top:20px">  <b>Oferecemos</b></h2>
+        <div class="cards-group">
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/frio-icon.png" alt="ar-condicionado">
+            <p>Central de ar</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/controle-icon.png" alt="TV a cabo">
+            <p>Netflix e Globoplay</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/frigobar-icon.png" alt="frigobar">
+            <p>Cozinha completa</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/wifi-icon.png" alt="i-Fi gratuito">
+            <p>Wi-Fi gratuito</p>
+          </div>
+        </div>
+        <div class="cards-group">
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/cafe-icon.png" alt="cafe da manhã">
+            <p>Café da manhã</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/maleta-icon.png" alt="longa estadia">
+            <p>Longa estadia</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/cliente-icon.png" alt="atendimento personalizado">
+            <p>Atendimento personalizado</p>
+          </div>
+          <div class="mini-card">
+            <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/preco-icon.png" alt="Preço justo">
+            <p>Preço justo</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <h2 id="pousadas" style="margin-top:20px;float:none;"> Nossas <b>Pousadas</b></h2>
+      <div class="big-badge" style="border-radius: 20px" id="alter-do-chao">
+        <h2 class="location-title">Alter do Chão</h2>
+        <img class="location-image" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-photo.jpg" alt="Alter">
+      </div>
+      <div class="unities-section">
+        <h2 class="unity-title">Unidade <b>Alter</b></h2>
+        <p><b>Perfeito para quem busca...</b></p>
+        <p>
+          <ul>
+            <li>Relaxar perto da praia.</li>
+            <li>Uma localização privilegiada no coração de Alter do Chão.</li>
+            <li>Um ambiente acolhedor para familias e grupos.</li>
+          </ul>
+
+          <div class="carrousel-container">
+            <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carrousel">
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/1.jpeg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/2.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/3.jpeg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/4.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/5.jpeg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/6.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/7.jpeg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/8.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/9.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/10.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/11.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/12.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/13.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/14.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-gallery/15.jpg"></div>
+            </div>
+            <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div><br><br><br>
+
+          
+
+
+          <div class="right-section">
+            <p><i class="fa-solid fa-umbrella-beach"></i> - Perto da praia.</p>
+            <p><i class="fa-solid fa-location-dot"></i> - Localização privilegiada.</p>
+            <p><i class="fa-solid fa-people-roof"></i> - Ambiente familiar.</p>
+          </div>
+        </p>
+      </div>
+      <div class="unities-section">
+        <h2 class="unity-title">Unidade <b>Family</b></h2>
+        <p><b>Perfeito para quem busca...</b></p>
+        <p>
+          <ul>
+            <li>Momentos em família ou com grupos de amigos.</li>
+            <li>Um espaço com piscina e áreas para churrasco.</li>
+            <li>Opção de hospedagem ou casa de temporada em Alter do Chão.</li>
+          </ul>
+
+          <div class="carrousel-container">
+            <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carrousel">
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/1.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/2.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/3.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/4.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/5.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/6.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/7.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/8.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/9.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/10.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/11.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/12.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/13.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/14.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/family-gallery/15.jpg"></div>
+            </div>
+            <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div><br><br><br><br><br><br>
+
+          
+
+
+          <div class="right-section">
+            <p><i class="fa-solid fa-water-ladder"></i> - Piscina.</p>
+            <p><i class="fa-solid fa-drumstick-bite"></i> - Churrasqueira.</p>
+            <p><i class="fa-solid fa-people-roof"></i> - Ideal para familias.</p>
+            <p><i class="fa-solid fa-road"></i> - Fácil acesso.</p>
+            <p><i class="fa-solid fa-user-group"></i> - Ideal para grupos.</p>
+            <p><i class="fa-solid fa-house"></i> - Pode também ser casa de temporada.</p>
+          </div>
+        </p>
+      </div>
+
+
+      <div class="big-badge" style="border-radius: 20px" id="santarem">
+        <h2 class="location-title">Santarém</h2>
+        <img class="location-image" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-photo.jpg" alt="santarem">
+      </div>
+      <div class="unities-section">
+        <h2 class="unity-title">Unidade <b>Santarém</b></h2>
+        <p><b>Perfeito para quem busca...</b></p>
+        <p>
+          <ul>
+            <li>Acomodação funcional e bem localizada.</li>
+            <li>Tranquilidade e conveniência em viagens corporativas.</li>
+            <li>Um local confortável durante tratamentos médicos.</li>
+          </ul>
+
+          <div class="carrousel-container">
+            <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carrousel">
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/1.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/2.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/3.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/4.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/5.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/6.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/7.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/8.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/9.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/10.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/11.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/12.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/13.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/14.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/15.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/16.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/17.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-gallery/18.jpg"></div>
+            </div>
+            <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div><br><br><br>
+
+          
+
+
+          <div class="right-section">
+            <p><i class="fa-solid fa-location-dot"></i> - Localização privilegiada.</p>
+            <p><i class="fa-solid fa-user-tie"></i> - Ideal para hospedagem corporativa.</p>
+            <p><i class="fa-solid fa-people-roof"></i> - Ideal para familias.</p>
+            <p><i class="fa-solid fa-house-medical"></i> - Ideal para pacientes médicos (cirurgias, grávidas, gerais, etc).</p>
+            <p><i class="fa-solid fa-map-location-dot"></i> - Muitos pontos funcionais nos arredores.</p>
+          </div>
+        </p>
+      </div>
+
+
+      <div class="unities-section">
+        <h2 class="unity-title">Unidade <b>Soft</b></h2>
+        <p><b>Perfeito para quem busca...</b></p>
+        <p>
+          <ul>
+            <li>Uma localização central e fácil acesso às principais atrações.</li>
+            <li>Conforto em suítes espaçosas.</li>
+            <li>A conveniência de um estacionamento privativo.</li>
+          </ul>
+
+          <div class="carrousel-container">
+            <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carrousel">
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/1.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/2.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/3.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/4.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/5.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/6.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/7.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/8.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/9.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/10.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/11.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/12.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/13.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/14.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/soft-gallery/15.jpg"></div>
+            </div>
+            <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div><br><br><br><br><br><br>
+
+          
+
+
+          <div class="right-section" style="top:0px">
+            <p><i class="fa-solid fa-location-dot"></i> - Localizada no Centro.</p>
+            <p><i class="fa-solid fa-car"></i> - Estacionamento privativo.</p>
+            <p><i class="fa-solid fa-umbrella-beach"></i> - Perto da orla.</p>
+            <p><i class="fa-solid fa-bed"></i> - Suítes amplas, maior conforto.</p>
+          </div>
+        </p>
+      </div>
+
+
+      <div class="big-badge" style="border-radius: 20px" id="pajucara">
+        <h2 class="location-title">Pajuçara</h2>
+        <img class="location-image" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-photo.jpg" alt="Pajuçara">
+      </div>
+      <div class="unities-section">
+        <h2 class="unity-title">Unidade <b>Pajuçara</b></h2>
+        <p><b>Perfeito para quem busca...</b></p>
+        <p>
+          <ul>
+            <li>Um refúgio exclusivo com piscina e áreas diferenciadas.</li>
+            <li>Proximidade ao Centro de Convenções e ao aeroporto.</li>
+            <li>Estar perto da famosa praia de Pajuçara.</li>
+          </ul>
+
+          <div class="carrousel-container">
+            <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <div class="carrousel">
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/1.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/2.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/3.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/4.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/5.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/6.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/7.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/8.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/9.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/10.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/11.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/12.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/13.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/14.jpg"></div>
+              <div class="carrousel-item"><img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-gallery/15.jpg"></div>
+            </div>
+            <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+          </div><br><br><br><br><br><br>
+
+          
+
+
+          <div id="long" class="right-section" style="border-radius:20px; height: 550px;">
+            <p><i class="fa-solid fa-water-ladder"></i> - Piscina.</p>
+            <p><i class="fa-solid fa-drumstick-bite"></i> - Churrasqueira.</p>
+            <p><i class="fa-solid fa-igloo"></i> - Ambientes exclusivos (Como a Casa da Árvore ou a Casa de Vidro).</p>
+            <p><i class="fa-solid fa-road"></i> - Fácil acesso.</p>
+            <p><i class="fa-solid fa-building"></i> - Perto do Centro de Convenções.</p>
+            <p><i class="fa-solid fa-plane"></i> - Perto do aeroporto.</p>
+            <p><i class="fa-solid fa-umbrella-beach"></i> - Perto da praia de Pajuçara.</p>
+          </div>
+        </p>
+      </div>
+
+      <h2 id="depoimentos" style="margin-top:20px"> O que dizem nossos <b>Clientes</b></h2>
+      <div class="big-badge-gradient">
+        <div class="testimonial">
+          <img id="testimonial-image" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/dep-1.png">
+          <div class="texts">
+            <p id="testimonial-text">"Nossa experiência na Casa do Ivo foi <b>simplesmente incrível</b>. O atendimento é <b>impecável</b>, a pousada é <b>extremamente confortável</b> e a localização é <b>perfeita</b> para aproveitar as <b>belezas de Alter do Chão</b>. Com certeza voltaremos!"</p>
+            <p id="testimonial-author" class="author">João e Maria, São Paulo.</p>
+          </div>
+          <div class="right-button"><i class="fa-solid fa-chevron-right"></i></div>
+          <div class="left-button"><i class="fa-solid fa-chevron-left"></i></div>
+        </div>
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+        <div class="circle-3"></div>
+        <div class="circle-4"></div>
+      </div>
+
+
+      <h2 id="o-que-ha-de-bom" style="margin-top:20px">
+        O que <b>há de bom</b>
+      </h2>
+      <div class="flex-images-container" id="oqhdb-1">
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-photo.jpg'">
+          <h2>Alter do Chão</h2>
+          <p>Belezas Naturais de Alter do Chão</p>
+          <div class="btn-action" onclick="window.location.href='#sobre-alter'">Quero saber mais</div>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/santarem-photo.jpg'">
+          <h2>Santarém</h2>
+          <p>Coração da Amazônia</p>
+          <div class="btn-action" onclick="window.location.href='#sobre-santarem'">Quero saber mais</div>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/pajucara-photo.jpg'">
+          <h2>Pajuçara</h2>
+          <p>Tranquilidade em Pajuçara</p>
+          <div class="btn-action" onclick="window.location.href='#sobre-pajucara'">Quero saber mais</div>
+        </div>
+      </div>
+      <h2 id="sobre-alter" style="font-size:30px; width:90%;">O que <b>tem de bom</b> em <b>Alter do Chão</b></h2>
+      <p style="width:90%;float:none;">
+        Alter do Chão, conhecido como o "Caribe Amazônico", oferece praias paradisíacas e paisagens únicas. Alter do Chão é um paraíso com lindíssimas praias desertas à beira do Rio Tapajós, no Pará. Ideal para relaxar na sua próxima viagem! (<a href="https://www.melhoresdestinos.com.br/alter-do-chao-para.html" target="_blank">Melhores destinos</a>, 2023).
+        <ul>
+          <li><b>Praias Desertas</b>: Quem quiser uma experiência diferente poderá investir em uma noite sob as estrelas em uma praia deserta.</li>
+          <li><b>Ilha do Amor</b>: Ideal para passeios e contemplação das águas cristalinas.</li>
+          <li><b>Lago Verde</b>: Aventura com passeios de barco e contato com a biodiversidade.</li>
+          <li><b>Serra Piraoca</b>: Maior morro da região, ele reina em meio à vegetação amazônica e oferece visão 360º para os arredores de Alter do Chão.</li>
+          <li><b>Trilha pela Floresta</b>: Através de uma trilha pela floresta, você pode se aventurar pela floresta e desfrutar de uma experiência única.</li>
+        </ul>
+      </p>
+      <div class="flex-images-container" style="margin-bottom:10px;">
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobrealter-1.jpg'">
+          <h2>Praias Desertas</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/alter-photo.jpg'">
+          <h2>Ilha do Amor</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobrealter-2.jpg'">
+          <h2>Lago Verde</h2>
+        </div>
+      </div>
+
+      <div class="carrousel-container" style="width:95%;margin:auto;margin-bottom: 50px;">
+        <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carrousel" style="margin:auto;">
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/05/passagens-aereas-alter-do-chao-capa2019-03.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-praias-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-tours-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-tempo-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-pousadas-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-como-se-locomover-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-quando-chegar-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-praia-da-ponta-de-pedras-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-praia-do-carapanari-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-rio-arapiuns-820x547.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/04/alter-do-chao-floresta-nacional-do-tapajos-820x547.jpg"></div>
+        </div>
+        <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <h2 id="sobre-santarem" style="font-size:30px; width:90%;">O que <b>tem de bom</b> em <b>Santarém</b></h2>
+      <p style="width:90%;float:none;">
+        Santarém é um destino cheio de história e natureza exuberante, unindo cultura e beleza natural. Se localiza no meio da rota fluvial do Rio Amazonas, entre Belém e Manaus. O destino oferece belas atrações turísticas incluídas pela biodiversidade da Amazônia, com áreas de floresta tropical, grandes rios, igapós e cerrado (<a href="https://www.viagensecaminhos.com/santarem-pa/" target="_blank">Viagens e Caminhos</a>, 2024).
+      </p>
+      <ul>
+        <li><b>Encontro das Águas</b>: Fascinante contraste entre os rios Amazonas e Tapajós. Um fenômeno natural impressionante onde as águas dos dois rios não se misturam.</li>
+        <li><b>Praia de Ponta de Pedras</b>: Bela praia do Rio Tapajós, que se destaca por suas formações rochosas em meio a areia branca.</li>
+        <li><b>Mercado Municipal</b>: Sabores autênticos e artesanato regional.</li>
+        <li><b>Floresta Nacional do Tapajós</b>: Trilhas e conexão com a exuberante Amazônia.</li>
+        <li><b>Orla do Rio Tapajós</b>: O calçadão da orla de Santarém é o ponto de encontro da cidade.</li>
+      </ul>
+      <div class="flex-images-container" style="margin-bottom:10px;">
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobresantarem-2.jpg'">
+          <h2>Ponta de Pedras</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobresantarem-1.jpg'">
+          <h2>Encontro das Águas</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobresantarem-3.jpg'">
+          <h2>Orla do Tapajós</h2>
+        </div>
+      </div>
+
+      <div class="carrousel-container" style="width:95%;margin:auto;margin-bottom: 50px;">
+        <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carrousel" style="margin:auto;">
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/santarem-para.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/santarem-para-amazonia.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/calcadao-orla-de-santarem.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/encontro-das-aguas-santarem-1.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/orla-de-santarem-para.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/porto-de-santarem-para.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/floresta-nacional-dos-tapajos-santarem.jpg"></div>
+          <div class="carrousel-item"><img src="https://www.viagensecaminhos.com/wp-content/uploads/2015/10/santarem-praia-ponta-de-pedras.jpg"></div>
+        </div>
+        <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <h2 id="sobre-pajucara" style="font-size:30px; width:90%;">O que <b>tem de bom</b> em <b>Pajuçara</b></h2>
+      <p style="width:90%;float:none;">
+        Pajuçara é um refúgio de calma e beleza, perfeito para quem busca conexão com a natureza. De suas águas calmas e areias brancas ao espetáculo do pôr do sol sobre o rio Amazonas, cada aspecto dessa praia promete surpreender e encantar. (<a href="https://casasaimiri.com.br/o-que-fazer-em-santarem/praias/pajucara/" target="_blank">Casa Saimiri</a>, 2024).
+      </p>
+      <ul>
+        <li><b>Perfeito para ver o pôr-so-sol</b>: Fascinante localização e perfeita para uma preciosa vista do pôr-do-sol.</li>
+        <li><b>Comunidade Acolhedora</b>: Tradição e hospitalidade típicas da Amazônia.</li>
+        <li><b>Proxima ao Aeroporto e ao Centro de Convenções</b>: Para aproveitar ao máximo os pontos importantes da região.</li>
+        <li><b>Praia de Pajuçara</b>: A Praia de Pajuçara é, sem dúvida, um local espetacular. Com suas areias douradas, águas cristalinas e vegetação exuberante, ela se destaca como um dos destinos mais atraentes para os amantes da natureza.</li>
+      </ul>
+
+      <div class="flex-images-container" style="margin-bottom:10px;">
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobrepajucara-2.webp'">
+          <h2>Perfeito para ver o pôr-do-sol</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobrepajucara-1.jpg'">
+          <h2>Praia de Pajuçara</h2>
+        </div>
+        <div class="flex-image-item" style="background-image: url('https://zeuss.b-cdn.net/casa-do-ivo/static/img/sobrepajucara-3.jpg'">
+          <h2>Perto do Centro de Convenções</h2>
+        </div>
+      </div>
+
+      <div class="carrousel-container" style="width:95%;margin:auto;margin-bottom: 50px;">
+        <button class="carrousel-btn left-btn"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carrousel" style="margin:auto;">
+          <div class="carrousel-item"><img src="https://casasaimiri.com.br/wp-content/uploads/2023/09/Alter_2019-914-1024x498.jpg"></div>
+          <div class="carrousel-item"><img src="https://casasaimiri.com.br/wp-content/uploads/2023/08/Alter_2019-912.jpg"></div>
+          <div class="carrousel-item"><img src="https://casasaimiri.com.br/wp-content/uploads/2023/07/Praia-de-Pajucara-1.jpg"></div>
+          <div class="carrousel-item"><img src="https://casasaimiri.com.br/wp-content/uploads/2023/09/Alter_2019-914-1024x498.jpg"></div>
+          <div class="carrousel-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/20/92/a8/p-20160121-145404-bf.jpg?w=900&h=-1&s=1"></div>
+          <div class="carrousel-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/34/24/5e/umas-das-praias-urbanas.jpg?w=900&h=500&s=1"></div>
+          <div class="carrousel-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/75/db/01/photo7jpg.jpg?w=900&h=500&s=1"></div>
+          <div class="carrousel-item"><img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/ed/e3/c4/photo0jpg.jpg?w=900&h=500&s=1"></div>
+        </div>
+        <button class="carrousel-btn right-btn"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+
+
+
+
+
+
+      
+    <div class="big-badge-gradient" style="display:grid">
+      <div id="texts-contact" class="texts">
+        <h2 class="title-contact" id="contato" style="margin-top:20px;">Faça sua reserva <b>agora</b>.</h2>
+        <p class="text-contact" style="font-style:italic">
+        <b>Planeje sua hospedagem com facilidade!</b>
+
+        <b>Escolha</b> a unidade que mais <b>combina com você</b>, informe as <b>datas</b> e <b>número de hóspedes</b>, e <b>nossa equipe</b> entrará em contato <b>rapidamente</b> para confirmar os detalhes. Estamos prontos para tornar sua <b>experiência</b> nas Pousadas Casa do Ivo <b>inesquecível</b>.
+        </p>
+        
+      </div>
+      <div class="group-flex">
+          <div class="button-brown" onclick="window.location.href='#'">RESERVE AGORA</div>
+          <p class="text-in-flex">ou</p>
+          <div class="button-transparent" onclick="window.open('https://wa.me/559384010771', '_blank');">Fale conosco</div>
+        </div>
+      <img class="image-contact" src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/illust-praia.png">
+    </div>
+    <div class="big-badge" id="footer" style="border-radius: 0px; margin: 0px;">
+      <img src="https://zeuss.b-cdn.net/casa-do-ivo/static/img/logomarca.png" alt="Casa do Ivo">
+      <div class="group-flex">
+        <div class="texts">
+          <h3>Contate-nos em</h3>
+          <ul>
+            <li onclick="window.open('https://wa.me/559384010771', '_blank');"><i class="fa-brands fa-whatsapp"></i> +55 (93) 991162557</li>
+            <li onclick="window.open('mailto:casadoivostm@gmail.com', '_blank');"><i class="fa-solid fa-envelope"></i> casadoivostm@gmail.com</li>
+            <li onclick="window.open('https://www.facebook.com/casadoivosantarem/', '_blank');"><i class="fa-brands fa-facebook"></i> Casa Do Ivo</li>
+            <li onclick="window.open('https://www.instagram.com/pousadascasadoivo/', '_blank');"><i class="fa-brands fa-instagram"></i> @pousadascasadoivo</li>
+          </ul>
+        </div>
+        <div class="texts">
+          <h3>Encontre-nos em</h3>
+          <ul>
+            <li><i class="fa-solid fa-location-dot"></i> Av. Mendonça Furtado, 2295 - Aldeia, Santarém - PA, 68040-050</li>
+            <li><i class="fa-solid fa-location-dot"></i> Ao lado da Pizzaria - Tv. Copacabana, 150 - Alter do Chão, Santarém - PA, 68109-971</li>
+            <li><i class="fa-solid fa-location-dot"></i> Tv. Copacabana, 12 - Alter do Chão, Santarém - PA, 68060-270</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+      document.querySelectorAll('.flex-image-item').forEach(item => {
+          item.addEventListener('mouseover', () => {
+              document.querySelectorAll('.flex-image-item').forEach(el => {
+                  el.classList.add('dimmed'); // Aplica opacidad baja a todos
+              });
+              item.classList.add('hov'); // Resalta el elemento en hover
+              item.classList.remove('dimmed'); // Excluye el actual del dimming
+          });
+
+          item.addEventListener('mouseout', () => {
+              document.querySelectorAll('.flex-image-item').forEach(el => {
+                  el.classList.remove('dimmed', 'hov'); // Resetea las clases
+              });
+          });
+      });
+    </script>
+  </body>
+</html>
